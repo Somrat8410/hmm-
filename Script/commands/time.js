@@ -37,15 +37,15 @@ module.exports.run = async function({ api, event }) {
  const imgPath = __dirname + "/cache/time.jpg";
  const imgURL = imgLinks[Math.floor(Math.random() * imgLinks.length)];
 
- const message = `🌸 𝗔𝘀𝘀𝗮𝗹𝗮𝗺𝘂 𝗔𝗹𝗮𝗶𝗸𝘂𝗺 🌸
+ const message = `🌸 𝙰𝚜𝚜𝚊𝚕𝚊𝚖𝚘 𝚊𝚕𝚢𝚔𝚘𝚖 🌸
 
-✨ 𝗕𝗼𝘁 𝗣𝗥𝗘𝗙𝗜𝗫: ${global.config.PREFIX}
+✨ 𝙱𝚘𝚝 𝚙𝚛𝚎𝚏𝚒𝚡: ${global.config.PREFIX}
 
-📆 𝗖𝘂𝗿𝗿𝗲𝗻𝘁 𝗧𝗶𝗺𝗲: ${currentTime}
+📆 𝙲𝚞𝚛𝚎𝚗𝚝 𝚝𝚒𝚖𝚎: ${currentTime}
 
-⏱️ 𝗕𝗼𝘁 𝗨𝗽𝘁𝗶𝗺𝗲: ${hours} hour(s), ${minutes} minute(s), ${seconds} second(s)
+⏱️ 𝙱𝚘𝚝 𝚞𝚙𝚝𝚒𝚖𝚎: ${hours} hour(s), ${minutes} minute(s), ${seconds} second(s)
 
-💠𝗕𝗢𝗧 𝗔𝗗𝗠𝗜𝗡 𝗦𝗔𝗛𝗔𝗗𝗔𝗧~𝗦𝗔𝗛𝗨💠
+👑 𝙰𝚍𝚖𝚒𝚗: 𝚂𝚘𝚖𝚛𝚊𝚝 𝙰𝚑𝚖𝚎𝚍
 
 
 ¶────██████────¶
@@ -63,7 +63,7 @@ module.exports.run = async function({ api, event }) {
 ¶────◥████◤────¶
 ¶─────◥██◤─────¶
 
-🌟 ─꯭─⃝‌‌𝐒𝐡𝐚𝐡𝐚𝐝𝐚𝐭 𝐂𝐡𝐚𝐭 𝐁𝐨𝐭 🌟`;
+  ─꯭─⃝‌‌𝚂𝚘𝚖𝚛𝚊𝚝 𝙲𝚑𝚊𝚝 𝙱𝚘𝚝💀`;
 
  const callback = () => {
  api.sendMessage({
