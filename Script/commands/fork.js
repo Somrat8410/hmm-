@@ -11,7 +11,7 @@ cooldowns: 3,
 
 module.exports.run = async function({ api, event }) {
 return api.sendMessage(
-"🔗 GitHub Repo Link:\n\nhttps://github.com/shahadat-sahu/SHAHADAT-CHAT-BOT.git",
+"-Fork-তোমার পিছন দিয়ে দিবো সোনা🐸😒🍼যাও আচার খাও-!!🥱🫃",
 event.threadID,
 event.messageID
 );
