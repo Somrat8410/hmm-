@@ -50,7 +50,7 @@ module.exports = {
  const finalMsg = `♡ ∩_∩
 （„• ֊ •„)♡
 ╭─∪∪────────────⟡
-│ CYBER ☢️ 𝗨𝗣𝗧𝗜𝗠𝗘 𝗜𝗡𝗙𝗢
+│  𝗨𝗣𝗧𝗜𝗠𝗘 𝗜𝗡𝗙𝗢
 ├───────────────⟡
 │ ⏰ RUNTIME
 │ ${uptimeFormatted}
