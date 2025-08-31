@@ -28,7 +28,7 @@ module.exports.run = async function({ api, event, args, client }) {
  var name = Date.now();
  var url = (event.type == "message_reply") ? event.messageReply.body : args.join(" ");
  var lvbang = /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g;
- if(url.match(lvbang) == null) return api.sendMessage({body:`╭•┄┅═══❁🌺❁═══┅┄•╮\n🕜𝚄𝙿𝚃𝙸𝙼𝙴 𝚁𝙾𝙱𝙾𝚃 🕧\n╰•┄┅═══❁🌺❁═══┅┄•╯\n\n【𝙷𝚎𝚕𝚕𝚘 𝚖𝚊𝚜𝚝𝚎𝚛 𝚢𝚘𝚞𝚛 𝚋𝚘𝚝 𝚌𝚞𝚛𝚛𝚎𝚗𝚝𝚕𝚢 𝚘𝚗𝚕𝚒𝚗𝚎 𝚒𝚗 𝚝𝚘𝚝𝚊𝚕 ${hours} 𝚑𝚘𝚞𝚛𝚜 ${minutes} 𝚖𝚒𝚗𝚞𝚝𝚎 ${seconds} 𝚜𝚎𝚌𝚘𝚗𝚍-:)👾】\n\n【𝙿𝚕𝚊𝚜𝚎 𝚎𝚗𝚝𝚎𝚛/𝚛𝚎𝚙𝚕𝚒𝚝 𝚝𝚑𝚎 𝚞𝚛𝚕 𝚝𝚘 𝚙𝚘𝚜𝚝 𝚘𝚗 𝚞𝚙𝚝𝚒𝚖𝚎 𝚛𝚘𝚋𝚘𝚝】`, attachment: fs.createReadStream(__dirname + `/noprefix/upt.png`)}, event.threadID, event.messageID);
+ if(url.match(lvbang) == null) return api.sendMessage({body:`╭•┄┅═══❁🌺❁═══┅┄•╮\n   🕜 𝚄𝙿𝚃𝙸𝙼𝙴 𝚁𝙾𝙱𝙾𝚃 🕧\n╰•┄┅═══❁🌺❁═══┅┄•╯\n\n【𝙷𝚎𝚕𝚕𝚘 𝚖𝚊𝚜𝚝𝚎𝚛 𝚢𝚘𝚞𝚛 𝚋𝚘𝚝 𝚌𝚞𝚛𝚛𝚎𝚗𝚝𝚕𝚢 𝚘𝚗𝚕𝚒𝚗𝚎 𝚒𝚗 𝚝𝚘𝚝𝚊𝚕 ${hours} 𝚑𝚘𝚞𝚛𝚜 ${minutes} 𝚖𝚒𝚗𝚞𝚝𝚎 ${seconds} 𝚜𝚎𝚌𝚘𝚗𝚍-:)👾】\n\n【𝙿𝚕𝚊𝚜𝚎 𝚎𝚗𝚝𝚎𝚛/𝚛𝚎𝚙𝚕𝚒𝚝 𝚝𝚑𝚎 𝚞𝚛𝚕 𝚝𝚘 𝚙𝚘𝚜𝚝 𝚘𝚗 𝚞𝚙𝚝𝚒𝚖𝚎 𝚛𝚘𝚋𝚘𝚝】`, attachment: fs.createReadStream(__dirname + `/noprefix/upt.png`)}, event.threadID, event.messageID);
  var request = require("request");
  var options = { method: 'POST',
  url: 'https://api.uptimerobot.com/v2/newMonitor',
