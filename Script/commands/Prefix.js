@@ -30,7 +30,11 @@ module.exports.handleEvent = async ({ event, api, Threads }) => {
   let lowerBody = body.toLowerCase();
   if (triggerWords.includes(lowerBody)) {
     return api.sendMessage(
-`【𝙿𝚁𝙴𝙵𝙸𝚇 𝙸𝙽𝙵𝙾𝚁𝙼𝙰𝚃𝙸𝙾𝙽】
+`♡ ∩_∩
+（„• ֊ •„)♡
+╭─∪∪────────────⟡
+│  𝙿𝚁𝙴𝙵𝙸𝚇 𝙸𝙽𝙵𝙾𝚁𝙼𝙰𝚃𝙸𝙾𝙽
+├───────────────⟡
 
  【𝙱𝙾𝚃 𝙸𝙽𝙵𝙾】
 🌐 𝙱𝚘𝚝 𝙿𝚛𝚎𝚏𝚒𝚡 : [ ${prefix} ]
@@ -40,13 +44,7 @@ module.exports.handleEvent = async ({ event, api, Threads }) => {
 【𝙱𝙾𝚇 𝙸𝙽𝙵𝙾】
 🌐 𝙱𝚘𝚡 𝙿𝚛𝚎𝚏𝚒𝚡 : ${prefix}
 💌 𝙱𝚘𝚡 𝙽𝚊𝚖𝚎 : ${groupName}
-🪩 𝙱𝚘𝚡 𝚃𝚒𝚍 : ${threadID}
-
-【𝙾𝚆𝙽𝙴𝚁 𝙸𝙽𝙵𝙾】
-👑 𝚆𝚘𝚗𝚎𝚛 𝙽𝚊𝚖𝚎 : 𝚂𝚘𝚖𝚛𝚊𝚝 𝙰𝚑𝚊𝚖𝚎𝚍
-🌐 𝙵𝚊𝚌𝚎𝚋𝚘𝚘𝚔 : https://www.facebook.com/somrat.3.2025
-💌 𝙼𝚎𝚜𝚜𝚎𝚗𝚐𝚎𝚛 : m.me/100087277612935
-🪩 𝚆𝚑𝚊𝚝𝚜𝚊𝚙𝚙 : https://wa.me/+8801910803384`,
+🪩 𝙱𝚘𝚡 𝚃𝚒𝚍 : ${threadID}`,
       threadID,
       null
     );
