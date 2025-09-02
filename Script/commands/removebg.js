@@ -60,4 +60,4 @@ module.exports.run = async function({
  console.log(e)
  return api.sendMessage(`❐ ɪsʟᴀᴍɪᴄ ʙᴏᴛ 𝚂𝙴𝚁𝚅𝙴𝚁 𝙱𝚄𝚂𝚈 𝙽𝙾𝚆 🚨`, event.threadID, event.messageID);
  }
- }
+}
