@@ -1,31 +1,43 @@
-module.exports.config = {
- name: "tag",
- version: "1.0.0",
- hasPermssion: 2,
- credits: "Shahadat Islam",
- description: "Group এ সবাইকে নির্দিষ্ট সংখ্যায় মেনশন পাঠানো",
- commandCategory: "group",
- usages: "/tag",
- cooldowns: 2
-};
+const config = {
+        name: "tag",
+        version: "1.6.9",
+        author: "Dipto",
+        credits: "Dipto",
+        countDown: 0,
+        role: 0,
+        hasPermission: 0,
+        description: "Tag user",
+        category: "tag",
+        commandCategory: "tag",
+        guide: "{pn} [reply/mention]",
+        usages: "reply or mention"
+    };
 
-module.exports.run = async ({ api, event, args }) => {
- const threadID = event.threadID;
- const threadInfo = await api.getThreadInfo(threadID);
- const memberIDs = threadInfo.participantIDs;
+const onStart = async ({ api, args, event }) => {
+       try {
+       const ID = event.messageReply?.senderID || args[0] || event.senderID;
+       const mentionedUser = await api.getUserInfo(ID);
+       if (mentionedUser && mentionedUser[ID]) {
+       const userName = mentionedUser[ID].name;
+       const text = args.join(" ");
+       await api.sendMessage({
+        body: `${userName} ${text}`,
+        mentions: [{
+            tag: userName,
+            id: ID 
+         }]
+       }, event.threadID, event.messageID);
+     } else {
+       api.sendMessage("Reply to a message to tag...", event.threadID, event.messageID);
+       }
+    } catch (error) {
+        console.log(error);
+        api.sendMessage(`Error: ${error.message}`, event.threadID, event.messageID);
+   }
+  };
 
- const repeatCount = parseInt(args[0]) || 1;
-
- const mentions = memberIDs
- .filter(id => id != api.getCurrentUserID())
- .map(id => ({ tag: "@user", id }));
-
- for (let i = 0; i < repeatCount; i++) {
- await api.sendMessage({
- body: `📢 @user`,
- mentions
- }, threadID);
-
- await new Promise(resolve => setTimeout(resolve, 2000)); 
- }
+module.exports = {
+  config, 
+  onStart,
+  run: onStart
 };
