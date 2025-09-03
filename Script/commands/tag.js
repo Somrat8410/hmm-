@@ -5,7 +5,7 @@ module.exports.config = {
  credits: "Shahadat Islam",
  description: "Group এ সবাইকে নির্দিষ্ট সংখ্যায় মেনশন পাঠানো",
  commandCategory: "group",
- usages: "/tag [everyone]",
+ usages: "/tag",
  cooldowns: 2
 };
 
@@ -18,11 +18,11 @@ module.exports.run = async ({ api, event, args }) => {
 
  const mentions = memberIDs
  .filter(id => id != api.getCurrentUserID())
- .map(id => ({ tag: "@everyone", id }));
+ .map(id => ({ tag: "@user", id }));
 
  for (let i = 0; i < repeatCount; i++) {
  await api.sendMessage({
- body: `📢 @everyone\nসবাই চিপা থেকে বের হও 🐸`,
+ body: `📢 @user`,
  mentions
  }, threadID);
 
