@@ -3,7 +3,7 @@ const request = require("request");
 const axios = require("axios");
 
 module.exports.config = {
-  name: "welcome",
+  name: "/",
   version: "1.0.0",
   hasPermssion: 0,
   credits: "SHAHADAT SCRIPT",
