@@ -1,7 +1,0 @@
-language = "nodejs"
-run = "node Sahu.js"
-
-modules = ["nodejs-20"]
-
-[nix]
-channel = "stable-24_05"
